@@ -1,5 +1,6 @@
-import '../style/Resume.css';
 import { useState } from 'react';
+import type { JSX } from "react";
+import '../style/Resume.css';
 import resumeData from '../data/resume.json';
 import certificationsData from '../data/certifications.json';
 import { SiGooglecloud, SiCoursera, SiCisco } from 'react-icons/si';
