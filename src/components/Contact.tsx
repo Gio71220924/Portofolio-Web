@@ -6,6 +6,7 @@ import "../style/Contact.css";
 
 const Contact = () => {
   const [formErrors, setFormErrors] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,17 +19,21 @@ const Contact = () => {
     const subject = data.get("subject")?.toString().trim();
     const message = data.get("message")?.toString().trim();
 
+    setFormErrors(null);
+    setSuccessMessage(null);
+
     if (!name || !email || !subject || !message) {
       setFormErrors("All fields are required.");
+      setTimeout(() => setFormErrors(null), 3000);
       return;
     }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
       setFormErrors("Invalid email address.");
+      setTimeout(() => setFormErrors(null), 3000);
       return;
     }
 
-    setFormErrors(null);
     setSubmitting(true);
 
     const response = await fetch("https://formspree.io/f/xblynzbj", {
@@ -39,8 +44,11 @@ const Contact = () => {
 
     if (response.ok) {
       form.reset();
+      setSuccessMessage("Message sent successfully! ✅");
+      setTimeout(() => setSuccessMessage(null), 3000);
     } else {
       setFormErrors("Failed to send. Please try again.");
+      setTimeout(() => setFormErrors(null), 3000);
     }
 
     setSubmitting(false);
@@ -77,21 +85,52 @@ const Contact = () => {
 
         {/* FORM SIDE */}
         <div className="col-lg-7">
-          <form onSubmit={handleSubmit} className="row g-4 contact-glass-form shadow-lg p-4 rounded">
+          <form
+            onSubmit={handleSubmit}
+            className="row g-4 contact-glass-form shadow-lg p-4 rounded"
+          >
             {formErrors && (
               <div className="alert alert-danger fs-6">{formErrors}</div>
             )}
+            {successMessage && (
+              <div className="alert alert-success fs-6">{successMessage}</div>
+            )}
+
             <div className="col-md-6">
-              <input type="text" name="name" className="form-control form-control-lg" placeholder="Your Name" required />
+              <input
+                type="text"
+                name="name"
+                className="form-control form-control-lg"
+                placeholder="Your Name"
+                required
+              />
             </div>
             <div className="col-md-6">
-              <input type="email" name="email" className="form-control form-control-lg" placeholder="Your Email" required />
+              <input
+                type="email"
+                name="email"
+                className="form-control form-control-lg"
+                placeholder="Your Email"
+                required
+              />
             </div>
             <div className="col-12">
-              <input type="text" name="subject" className="form-control form-control-lg" placeholder="Subject" required />
+              <input
+                type="text"
+                name="subject"
+                className="form-control form-control-lg"
+                placeholder="Subject"
+                required
+              />
             </div>
             <div className="col-12">
-              <textarea name="message" className="form-control form-control-lg" rows={6} placeholder="Your Message" required></textarea>
+              <textarea
+                name="message"
+                className="form-control form-control-lg"
+                rows={6}
+                placeholder="Your Message"
+                required
+              ></textarea>
             </div>
             <div className="col-12 text-end">
               <motion.button
@@ -111,4 +150,5 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;
