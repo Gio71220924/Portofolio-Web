@@ -1,0 +1,66 @@
+/* Judul dan subjudul */
+.resume-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.resume-subtitle {
+  font-size: 1.1rem;
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Tombol tab */
+.resume-tab-btn {
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.resume-tab-group {
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* Kotak konten */
+.resume-box {
+  border: 2px solid #dee2e6; /* abu-abu terang */
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  margin-bottom: 5rem;
+  background-color: #fff;
+}
+
+/* Garis pemisah item */
+.resume-divider {
+  border-top: 2px solid #1A1423;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Garis dashed antar sertifikat */
+.resume-dashed-line {
+  border-top: 1px dashed #ccc;
+  margin-top: 1rem;
+}
+
+/* Icon issuer (optional) */
+.issuer-icon {
+  margin-right: 0.5rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Link credential */
+.credential-link {
+  font-size: 0.85rem;
+  text-decoration: underline;
+  color: #0d6efd;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}

@@ -1,0 +1,150 @@
+/* ====== BASE STYLING ====== */
+
+/* Sticky Header */
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+/* Saat Scroll */
+.header-container.scrolled {
+  background-color: #d62246;
+}
+
+/* Logo Kiri */
+.header-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #1a1423;
+  transition: color 0.3s ease;
+}
+.header-container.scrolled .header-logo {
+  color: white;
+}
+
+/* ====== NAVIGATION ====== */
+
+.header-nav ul {
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Link Dasar */
+.header-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  color: #1a1423;
+  transition: color 0.3s ease;
+  text-decoration: none !important;
+}
+
+/* Saat scroll */
+.header-link.scrolled {
+  color: white;
+}
+
+/* Hover Style */
+.header-link.hovered {
+  color: #d62246;
+}
+.header-link.hovered-scrolled {
+  color: #ffddee;
+}
+
+/* Hover Override */
+.header-link:hover {
+  color: #d62246 !important;
+  text-decoration: none !important;
+}
+.header-container.scrolled .header-link:hover {
+  color: #e0e0e0 !important;
+}
+
+/* Icon Contact */
+.header-icon {
+  cursor: pointer;
+  color: #d62246;
+  transition: color 0.3s ease;
+}
+.header-icon.scrolled {
+  color: white;
+}
+
+/* ====== HAMBURGER MENU ====== */
+
+.hamburger-button {
+  display: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.hamburger-button.scrolled {
+  color: white;
+}
+
+/* ====== RESPONSIVE (MOBILE) ====== */
+@media (max-width: 991px) {
+  .header-nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .header-link {
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: #1a1423 !important;
+  }
+
+  .header-link:hover {
+    color: #d62246 !important;
+  }
+
+  .header-container.scrolled .header-link:hover {
+    color: #e0e0e0 !important;
+  }
+
+  .header-icon {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+    color: #d62246;
+  }
+}
+
+@media (min-width: 992px) {
+  .hamburger-button {
+    display: none;
+  }
+}

@@ -1,0 +1,73 @@
+/* Section Jarak dan Layout */
+#contact {
+  margin-top: 190px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Headline "Let's Talk" */
+.contact-heading {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #d62246;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Deskripsi */
+.contact-description {
+  font-size: 1.5rem;
+  color: #6c757d;
+  line-height: 1.9;
+  margin-top: 1.2rem;
+  animation: fadeIn 1s ease;
+}
+
+/* === Kotak Form Glassy === */
+.glassy-form {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3rem 4rem; /* diperbesar dari sebelumnya */
+  border-radius: 20px;
+  animation: fadeInUp 0.5s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+/* === Ukuran input & textarea diperbesar sedikit === */
+.glassy-form input,
+.glassy-form textarea {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #dee2e6;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+/* Fokus efek */
+.glassy-form input:focus,
+.glassy-form textarea:focus {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: #d62246;
+  box-shadow: 0 0 0 0.2rem rgba(214, 34, 70, 0.25);
+}
+
+/* Animasi muncul */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .glassy-form {
+    padding: 2rem;
+  }
+}
+
+

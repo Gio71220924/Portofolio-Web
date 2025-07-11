@@ -1,0 +1,37 @@
+.footer-container {
+  background-color: #D62246;
+  color: #F0F6F6;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.footer-icon {
+  color: #F0F6F6;
+  transition: transform 0.08s ease, color 0.3s ;
+}
+
+.footer-icon:hover {
+  color: #ffffff;
+}
+
+.footer-credits small {
+  color: #F0F6F6;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-credits small:hover {
+  color: #ffffff;
+}
+
+/* Responsive tweak */
+@media (max-width: 576px) {
+  .footer-icons {
+    gap: 1.2rem;
+  }
+
+  .footer-container {
+    padding: 2rem 1rem;
+  }
+}

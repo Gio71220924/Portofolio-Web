@@ -1,0 +1,21 @@
+.project-card {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 1.5rem 0; /* Tambahkan jarak atas & bawah */
+  margin-bottom: 4rem; /* Tambahkan jarak bawah */
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* deeper shadow on hover */
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    margin: 1rem 0; /* Sesuaikan juga di mobile */
+  }
+}
+

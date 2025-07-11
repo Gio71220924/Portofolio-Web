@@ -1,0 +1,29 @@
+{
+  "education": [
+    {
+      "institution": "Duta Wacana Christian University",
+      "period": "August 2022 - Present",
+      "details": "Informatics Engineering"
+    },
+    {
+      "institution": "Bangkit Academy Batch 2 2024",
+      "period": "September 2024 - January 2025",
+      "details": "Cloud Computing Cohort"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Duta Wacana Christian University",
+      "position": "Computer Network Lab Assistant Lecturer (Part-time)",
+      "period": "February 2024 – June 2025",
+      "details": "Assisted and supervised students during lab sessions, actively engaging them through practical applications of computer networking concepts such as router and switch configuration fundamentals, and subnetting in Cisco Packet Tracer."
+    },
+
+    {
+      "company": "Duta Wacana Christian University",
+      "position": "LAN Infrastructure Lab Assistant Lecturer (Part-time)",
+      "period": "August 2024 - January 2025",
+      "details":"Facilitated hands-on learning in core networking concepts, such as DHCP (IPv4 & IPv6), static and dynamic routing, VLAN configuration, and wireless networking, enabling students to design and implement real-world network infrastructures."
+    }
+  ]
+}

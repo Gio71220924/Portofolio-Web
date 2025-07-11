@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Sweet Track | Bangkit Academy",
+    "description": "An Android-based mobile application for diabetes management. The app features image-based food recognition, automated nutritional data extraction, daily calorie and sugar intake tracking, and an integrated chatbot that provides diabetes-related education and lifestyle guidance.",
+    "image": "/assets/projects/Sweettrack.png",
+    "link": "https://github.com/Gio71220924/Sweet-Track-CC",
+    "buttonText": "View on GitHub"
+  },
+  {
+    "title": "Deteksi dan Koreksi Kemiringan menggunakan Hough Transform",
+    "description": "Sebuah website sederhana berbasis Python dan Streamlit yang dirancang untuk mendeteksi serta mengoreksi kemiringan pada gambar teks menggunakan algoritma Hough Transform. Proyek ini membantu memastikan gambar teks berada dalam posisi yang lurus agar mudah dibaca atau diproses lebih lanjut.",
+    "image": "/assets/projects/hough.png",
+    "link": "https://github.com/Gio71220924/DigHum-TA",
+    "buttonText": "Akses Project",
+    "buttonLink": "https://dighum-ta.streamlit.app/"
+  }
+]
