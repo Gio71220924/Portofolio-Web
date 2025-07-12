@@ -40,28 +40,22 @@ function Projects() {
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div key={index} className="px-3">
-            <div className="project-card h-100 overflow-hidden">
+            <div className="project-card h-100 overflow-hidden d-flex flex-column">
               <div className="position-relative">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="card-img-top"
-                  style={{
-                    height: "200px",
-                    objectFit: "contain",
-                    objectPosition: "center",
-                    backgroundColor: "#fff"
-                  }}
                 />
               </div>
               <div className="card-body p-4">
                 <h5 className="card-title mb-2" style={{ fontWeight: "bold", color: "#333" }}>
                   {project.title}
                 </h5>
-                <p className="card-text text-muted mb-3" style={{ fontSize: "0.9rem" }}>
+                <p className="card-text text-muted mb-3 flex-grow-1">
                   {project.description}
                 </p>
-                <div className="d-flex justify-content-between align-items-center">
+                <div className="mt-auto d-flex justify-content-between align-items-center">
                   <a
                     href={project.buttonLink || project.link}
                     className="btn btn-outline-danger btn-sm"
